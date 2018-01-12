@@ -178,6 +178,7 @@ angular.module("ion-datetime-picker", ["ionic"])
           } else if (+value || +value === 0) {
             $scope[unit] = +value;
             if (unit === "month" || unit === "year") {
+              console.log(unit+" ===test");
               $scope.day = Math.min($scope.day, getDaysInMonth($scope.year, $scope.month));
             }
             changeViewData();
